@@ -1,0 +1,20 @@
+remove unwanted apps
+
+fix sources by /etc/apt/sources.list.bak then creating /etc/apt/sources.list.d/debian.sources
+fix apt.conf.d to stop recommending unnecessary installs
+
+sudo apt install --no-install-recommends <package name> (to not install unwanted apps)
+
+sudo apt install gnome-shell-extension-manager gir1.2-gtop-2.0 lm-sensors alacritty blanket iotas libavcodec-extra fonts-noto-core  fonts-noto-ui-core systemd-zram-generator mpv ytdlp amberol gimp libgts-bin gimp-data-extras  gimp-help-en kdenlive obs-studio frei0r-plugins obs-plugins swh-plugins qt6-gtk-platformtheme
+
+gsettings set org.gnome.desktop.interface cursor-size 20 
+
+sudo apt install gnome-themes-extra
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+
+To list .deb packages - 
+    apt list '~o' 2>/dev/null
+
+Installed as .deb - Fresh, Helix, Codium, Anydesk, Helium, Brave, nautilus-extension-any-terminal
+
+Installed as .tar.gz, Firefox
