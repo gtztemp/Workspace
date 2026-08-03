@@ -1,0 +1,54 @@
+Remove Bloat 
+(mark  liberation-fonts-all, liberation-sans-fonts, liberation-serif-fonts before removing libre because they will be asked to download again when installing web browser in future such as brave/throrium/edge)
+
+Dnf conf - sudo nano /etc/dnf/dnf.conf 
+	max_parallel_downloads=10
+	exclude = firefox firefox-langpacks
+
+Fully update from terminal - 
+	sudo dnf up --refresh --assumeno
+	sudo dnf up --offline -y
+	sudo dnf offline reboot -y
+	sudo dnf offline clean (not required most of the time)
+	
+Rpm Fusion for Multimedia/Codec -
+	https://rpmfusion.org/Howto/Multimedia
+
+For Devlopment - dnf install @development-tools
+
+Download software, web browser etc 
+
+Remove/Disable repos -
+	/etc/yum.repos.d/
+	
+Remove -	
+	sudo dnf remove gnome-software
+	sudo dnf remove PackageKit
+	sudo dnf autoremove
+	sudo dnf clean all
+	
+To make ptyxis transparent -
+	dconf write /org/gnome/Ptyxis/Profiles/$(dconf read /org/gnome/Ptyxis/default-profile-uuid | tr -d "'")/opacity 0.85
+
+Cursor size 20-
+	gsettings set org.gnome.desktop.interface cursor-size 20
+	
+Autohide grub-
+	sudo grub2-editenv - set menu_auto_hide=1
+	
+Chech path -
+	echo $PATH
+Add path to fish -
+	fish_add_path ~/.local/bin
+Link AppImage systemwide -
+	ln -s ~/AppImages/name.appimage ~/.local/bin/name
+	
+Reset logs -
+	journalctl --list-boots
+	sudo journalctl --rotate
+	sudo journalctl --vacuum-time=1s
+	journalctl --list-boots
+	
+For legacy app theme support-
+	sudo dnf install adw-gtk3-theme
+	gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
