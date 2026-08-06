@@ -1,0 +1,22 @@
+* {
+    Margin:0;
+    Padding:0;
+    Box-sizing: border-box;
+    
+}
+
+html,body{
+    Width:100%;
+    Height:100%;
+    background-color: #202124;
+    color: white;
+
+}
+
+.main{
+    display: flex;
+    background-color: rgb(125, 125, 125);
+    width: 100%;
+    height: 100%;
+}
+

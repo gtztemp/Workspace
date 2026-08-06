@@ -12,3 +12,8 @@ git commit -m "synced debianguide"
 git push
 git config --global alias.sync '!git add . && git commit -m "synced" || true && git push'
 git sync
+
+// on another pc
+git pull
+git config --global alias.sync '!git add . && git commit -m "synced" || true && git push'
+git sync
