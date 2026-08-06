@@ -1,7 +1,7 @@
 #Ex-1
 # name = 'Gaurav'
 # message = 'would you like to learn python?'
-# print (f'Hello {name}, {message}') 
+# print (f'Hello {name}, {message}')
 # output= Hello Gaurav, would you like to learn python?
 
 #Ex-1.1
@@ -56,5 +56,5 @@
 
 
 
-
+print ("hello world")
 
