@@ -1,28 +1,28 @@
-#Ex-1
+# Ex-1
 # name = 'Gaurav'
 # message = 'would you like to learn python?'
 # print (f'Hello {name}, {message}')
 # output= Hello Gaurav, would you like to learn python?
 
-#Ex-1.1
+# Ex-1.1
 # author = 'Albert Einstein'
 # quote = 'A person who never made a mistake never tried anything new.'
 # print (f'{author} once said, "{quote}"')
 # output = Albert Einstein once said, "A person who never made a mistake never tried anything new."
 
-#Ex-2
+# Ex-2
 # n = int(input("Number - "))
 # for i in range (1, n+1):
 #     print(" "* (n-i),"*"* (2*i-1))
 
-#Ex-2.1
+# Ex-2.1
 # rows = int(input("Number - "))
 # for i in range(rows):
 #     spaces = ' ' * (rows - i - 1)
 #     stars = '*' * (2 * i + 1)
 #     print(spaces + stars)
 
-#Ex-3.1
+# Ex-3.1
 # class Employee:
 #     language = "python"
 #     salary = 120
@@ -33,7 +33,7 @@
 # harry.language = "Java" #will override python
 # Employee.getInfo(harry) #or# harry.getInfo()
 
-#Ex-3.2
+# Ex-3.2
 # class Employee:
 #     language = "python"
 #     salary = 120
@@ -53,8 +53,3 @@
 
 # for i in range(1,11):
 #     print(i)
-
-
-
-print ("hello world")
-

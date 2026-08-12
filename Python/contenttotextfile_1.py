@@ -4,7 +4,7 @@ import os
 directory_path = os.getcwd()
 
 # Name of the output text file
-output_file = 'directory_contents.txt'
+output_file = "directory_contents.txt"
 
 # Get the script filename
 script_file = os.path.basename(__file__)
@@ -21,9 +21,7 @@ files = [item for item in items if os.path.isfile(os.path.join(directory_path, i
 all_items = folders + files  # Combine folders and files into one list
 
 # Write plain list of folder and file names (no numbering)
-with open(os.path.join(directory_path, output_file), 'w', encoding='utf-8') as f:
-    for item in all_items:
-        f.write(f"{item}\n")
+with open(os.path.join(directory_path, output_file), "w", encoding="utf-8") as f:
+    f.writelines(f"{item}\n" for item in all_items)
 
 print(f"Folder and file names have been saved to {output_file}")
-

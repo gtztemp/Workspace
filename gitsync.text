@@ -17,6 +17,33 @@ git config --global alias.sync '!git add . && git commit -m "synced" || true && 
 git sync
 
 // on another pc
-git pull
-git config --global alias.sync '!git add . && git commit -m "synced" || true && git push'
-git sync
+    git pull
+    git config --global alias.sync '!git add . && git commit -m "synced" || true && git push'
+    git sync
+
+// revert git add .
+    git restore --cached .
+
+// revert git commit 
+    git reset --soft HEAD~1
+    
+// revert commit and add .
+    git reset HEAD~1
+    
+// I want to go back to Stage, where I had started working today (soft reset , wont modify local directory changes) 
+    git reset HEAD~1
+    git push --force-with-lease
+    
+// I want to go back to Stage, where I had started working today (hard reset) -
+    git reset --hard HEAD~1
+    git push --force-with-lease    
+
+// Monthly / occasional maintenance
+    git fetch --prune && git gc
+
+If you added very large files and want immediate removal -
+    git reflog expire --expire=now --all 
+    git gc --prune=now
+
+// Check repository health
+    git fsck

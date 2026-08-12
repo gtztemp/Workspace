@@ -18,3 +18,5 @@ To list .deb packages -
 Installed as .deb - Fresh, Helix, Codium, Anydesk, Helium, Brave, nautilus-extension-any-terminal
 
 Installed as .tar.gz, Firefox
+
+sudo apt install spice-vdagent qemu-guest-agent (inside debian and kali)
