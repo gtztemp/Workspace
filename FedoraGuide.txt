@@ -6,9 +6,11 @@ Dnf conf - sudo nano /etc/dnf/dnf.conf
 	exclude = firefox firefox-langpacks
 
 Fully update from terminal - 
+
 	sudo dnf up --refresh --assumeno
 	sudo dnf up --offline -y
 	sudo dnf offline reboot -y
+	
 	sudo dnf offline clean (not required most of the time)
 	
 Rpm Fusion for Multimedia/Codec -
