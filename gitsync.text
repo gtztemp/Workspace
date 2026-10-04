@@ -75,8 +75,16 @@ git sync
 
 
 // on another pc
+    git status
+    
+# If there are no local changes: nothing to commit, working tree clean
     git pull
-    git config --global alias.sync '!git add . && git commit -m "synced" || true && git push'
+	
+#If there are local changes you DON'T care about:
+	git fetch origin
+	git reset --hard origin/main
+	
+	
     git sync
 
 // revert git add .
