@@ -7,8 +7,30 @@ git config --global user.email "gaurav.rockins@gmail.com"
 git config --global core.fileMode false
 git config --global init.defaultBranch main
 
+# ─────────────────────────────────────────
+# SSH setup
+# ─────────────────────────────────────────
+
+# Create SSH key (only if this PC doesn't already have one)
+ssh-keygen -t ed25519 -C "gaurav.rockins@gmail.com"
+
+# press Enter then it will ask for a passphrase, Press Enter twice for no passphrase
+
+# Show PUBLIC key
+cat ~/.ssh/id_ed25519.pub
+
+# Add the displayed public key to:
+# https://github.com/settings/keys
+#
+# Then test GitHub authentication and Type: yes when asked
+ssh -T git@github.com
+
+# ─────────────────────────────────────────
+# Git repository setup
+# ─────────────────────────────────────────
+
 git init
-git remote add origin https://github.com/gtztemp/Workspace.git
+git remote add origin git@github.com:gtztemp/Workspace.git
 git remote -v
 git fetch origin
 
@@ -40,15 +62,17 @@ git status
 git add .
 git commit -m "synced"
 
-# First push: establish upstream
+# First push on this PC:
+# establishes local main -> origin/main
 git push -u origin main
-
-
 
 # Then configure your shortcut
 
 git config --global alias.sync '!git add . && git commit -m "synced" || true && git push'
 git sync
+
+##################################################################################################################
+
 
 // on another pc
     git pull
