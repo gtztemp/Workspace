@@ -17,6 +17,8 @@ Rpm Fusion for Multimedia/Codec -
 	https://rpmfusion.org/Howto/Multimedia
 
 For Devlopment - dnf install @development-tools
+				sudo dnf install ty ruff clang-tools-extra (helix setup)
+
 
 Download software, web browser etc 
 
