@@ -1,18 +1,48 @@
-git config --global user.name "Your Name"
-git config --global user.email "your-email@example.com"
+# ─────────────────────────────────────────
+# Git setup on a fresh PC
+# ─────────────────────────────────────────
+
+git config --global user.name "gtztemp"
+git config --global user.email "gaurav.rockins@gmail.com"
 git config --global core.fileMode false
+
 git init
 git branch -M main
 git remote add origin https://github.com/gtztemp/Workspace.git
 git remote -v
+
 git fetch origin
+
+# ─────────────────────────────────────────
+# Choose ONE:
+#
+# If Workspace files were manually copied
+# from the previous PC:
+# ─────────────────────────────────────────
+
+git reset --mixed origin/main
+
+# This keeps the current local files and
+# makes local main follow GitHub's history.
+#
+# ─────────────────────────────────────────
+# OR
+#
+# If Workspace is empty / no local files:
+# ─────────────────────────────────────────
+
 git merge origin/main
+
+# ─────────────────────────────────────────
+
+git status
+
 git add .
-git commit -m "Initial commit"
-git push -u origin main
-git add .
-git commit -m "synced debianguide"
+git commit -m "synced"
 git push
+
+# Then configure your shortcut
+
 git config --global alias.sync '!git add . && git commit -m "synced" || true && git push'
 git sync
 

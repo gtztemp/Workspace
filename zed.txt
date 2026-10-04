@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "disable_ai": true,
+    "proxy": "",
+    "auto_update": false,
     "terminal": {
         "dock": "bottom",
         "font_family": "MonoLisa",
@@ -39,12 +42,16 @@
 
     "base_keymap": "VSCode",
 
-    "icon_theme": "JetBrains New UI Icons (Dark)",
+    "icon_theme": {
+        "mode": "light",
+        "light": "JetBrains New UI Icons (Dark)",
+        "dark": "JetBrains New UI Icons (Dark)"
+    },
 
     "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "One Dark Pro",
+        "dark": "One Dark Pro Max",
     },
 
     "ui_font_size": 16,
@@ -73,8 +80,6 @@
     },
 
     "format_on_save": "on",
-
-    "restore_on_startup": "last_session",
 
     "show_completions_on_input": true,
 
