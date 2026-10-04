@@ -5,12 +5,11 @@
 git config --global user.name "gtztemp"
 git config --global user.email "gaurav.rockins@gmail.com"
 git config --global core.fileMode false
+git config --global init.defaultBranch main
 
 git init
-git branch -M main
 git remote add origin https://github.com/gtztemp/Workspace.git
 git remote -v
-
 git fetch origin
 
 # ─────────────────────────────────────────
@@ -37,9 +36,14 @@ git merge origin/main
 
 git status
 
+# If there are local changes to sync:
 git add .
 git commit -m "synced"
-git push
+
+# First push: establish upstream
+git push -u origin main
+
+
 
 # Then configure your shortcut
 
