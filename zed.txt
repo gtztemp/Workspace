@@ -6,14 +6,21 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
+
 {
     "disable_ai": true,
-    "proxy": "",
-    "auto_update": false,
+
     "terminal": {
         "dock": "bottom",
         "font_family": "MonoLisa",
         "max_scroll_history_lines": 5000,
+
+        "detect_venv": {
+            "on": {
+                "directories": [".venv"],
+                "activate_script": "fish"
+            }
+        }
     },
 
     "git_panel": {
@@ -42,16 +49,12 @@
 
     "base_keymap": "VSCode",
 
-    "icon_theme": {
-        "mode": "light",
-        "light": "JetBrains New UI Icons (Dark)",
-        "dark": "JetBrains New UI Icons (Dark)"
-    },
+    "icon_theme": "JetBrains New UI Icons (Dark)",
 
     "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "One Dark Pro Max",
+        "dark": "One Dark Pro Glass",
     },
 
     "ui_font_size": 16,
@@ -81,6 +84,8 @@
 
     "format_on_save": "on",
 
+    "restore_on_startup": "last_session",
+
     "show_completions_on_input": true,
 
     "edit_predictions": {
@@ -94,21 +99,22 @@
 
     "languages": {
         "Python": {
-            "format_on_save": "on",
+            "language_servers": [
+                "ty",
+                "ruff",
+                "!basedpyright"
+            ],
+
             "formatter": {
                 "language_server": {
-                    "name": "ruff",
-                },
+                    "name": "ruff"
+                }
             },
+
             "code_actions_on_format": {
                 "source.fixAll.ruff": true,
-                "source.organizeImports.ruff": true,
-            },
-        },
-
-        "Markdown": {
-            "soft_wrap": "editor_width",
-        },
-    },
+                "source.organizeImports.ruff": true
+            }
+        }
+    }
 }
-
