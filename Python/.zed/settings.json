@@ -1,0 +1,18 @@
+{
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "directories": [".venv"],
+        "activate_script": "fish"
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "ty",
+        "!basedpyright"
+      ]
+    }
+  }
+}
