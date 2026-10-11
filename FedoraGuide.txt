@@ -18,6 +18,8 @@ Rpm Fusion for Multimedia/Codec -
 
 For Devlopment - dnf install @development-tools
 				sudo dnf install ty ruff clang-tools-extra (helix setup)
+				
+For Games - sudo dnf remove mangohud goverlay lm_sensors
 
 
 Download software, web browser etc 
@@ -56,3 +58,34 @@ Reset logs -
 For legacy app theme support-
 	sudo dnf install adw-gtk3-theme
 	gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
+	
+===================  Performing system upgrade  ===========================
+
+	sudo dnf upgrade --refresh
+	sudo reboot
+	sudo dnf system-upgrade download --releasever=45
+	sudo dnf offline reboot
+	sudo dnf offline clean
+
+== Clean-up retired packages ==
+
+	sudo dnf install remove-retired-packages
+	remove-retired-packages
+
+== Clean-up old packages ==
+ 
+	sudo dnf repoquery --duplicates
+ 
+	sudo dnf remove --duplicates
+ 
+For packages from the official repositories, the latest version should be installed. However, some packages that are still on your system may no longer be in the repositories. To see a list of these packages do:
+
+	sudo dnf list --extras
+ 
+If you see a package you do not need, or use, you can remove it with:
+
+	sudo dnf remove $(sudo dnf repoquery --extras --exclude=kernel,kernel-\*,kmod-\*)
+	
+You can safely remove packages no longer in use with:
+
+	sudo dnf autoremove
