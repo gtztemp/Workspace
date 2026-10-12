@@ -16,13 +16,12 @@ Fully update from terminal -
 Rpm Fusion for Multimedia/Codec -
 	https://rpmfusion.org/Howto/Multimedia
 
-For Devlopment - dnf install @development-tools
-				sudo dnf install ty ruff clang-tools-extra (helix setup)
+For Devlopment - dnf in @development-tools
+				sudo dnf in ty ruff clang-tools-extra (helix setup)
 				
-For Games - sudo dnf remove mangohud goverlay lm_sensors
+For Games - sudo dnf in mangohud goverlay lm_sensors
 
-
-Download software, web browser etc 
+Download software - sudo dnf in gnome-extensions-app file-roller gnome-tweaks 
 
 Remove/Disable repos -
 	/etc/yum.repos.d/
@@ -34,10 +33,10 @@ Remove -
 	sudo dnf clean all
 	
 To make ptyxis transparent -
-	dconf write /org/gnome/Ptyxis/Profiles/$(dconf read /org/gnome/Ptyxis/default-profile-uuid | tr -d "'")/opacity 0.85
+	dconf write /org/gnome/Ptyxis/Profiles/$(dconf read /org/gnome/Ptyxis/default-profile-uuid | tr -d "'")/opacity 0.9
 
 Cursor size 20-
-	gsettings set org.gnome.desktop.interface cursor-size 20
+	gsettings set org.gnome.desktop.interface cursor-size 22
 	
 Autohide grub-
 	sudo grub2-editenv - set menu_auto_hide=1
@@ -56,7 +55,7 @@ Reset logs -
 	journalctl --list-boots
 	
 For legacy app theme support-
-	sudo dnf install adw-gtk3-theme
+	sudo dnf in adw-gtk3-theme
 	gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 	
 ===================  Performing system upgrade  ===========================
@@ -69,7 +68,7 @@ For legacy app theme support-
 
 == Clean-up retired packages ==
 
-	sudo dnf install remove-retired-packages
+	sudo dnf in remove-retired-packages
 	remove-retired-packages
 
 == Clean-up old packages ==
