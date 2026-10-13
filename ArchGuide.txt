@@ -1,0 +1,18 @@
+pacman -Q | grep package
+sudo pacman -Rns gnome-software epiphany vim gnome-maps htop gnome-tour gnome-music gnome-contacts simple-scan
+sudo pacman -Rns $(pacman -Qtdq)
+sudo pacman -Scc
+hide other apps from /usr/share/application/.desktop
+
+sudo pacman -Syu power-profiles-daemon
+
+gnome-text-editor /etc/pacman.d/mirrorlist
+
+sudo pacman -S alacritty fish file-roller noto-fonts mpv amberol
+
+flatpak install bazaaar
+flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud
+flatpak install org.freedesktop.Platform.VulkanLayer.vkBasalt 
+
+gsettings set org.gnome.desktop.interface cursor-size 20
+
