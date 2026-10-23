@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Beginner Guide</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            line-height: 1.6;
+            padding: 40px;
+        }
+        h1, h2, h3 {
+            color: #4ec9b0;
+        }
+        code {
+            background-color: #252526;
+            color: #dcdcaa;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #3c3c3c;
+            padding: 8px 12px;
+        }
+        th {
+            background-color: #333;
+            color: #dcdcaa;
+        }
+        td {
+            background-color: #2d2d2d;
+        }
+        blockquote {
+            background-color: #264f78;
+            color: #ffffff;
+            padding: 15px;
+            border-left: 6px solid #007acc;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>🐍 Python Beginner Guide</h1>
+
+<p>Welcome! If you're just starting to learn programming through Python, this guide will walk you through essential best practices, naming conventions, and the most important rules you should follow as a beginner.</p>
+
+<hr />
+
+<h2>📌 General Rules to Remember</h2>
+
+<ul>
+<li><strong>Use meaningful names</strong> for variables and functions.</li>
+<li><strong>Indent your code properly</strong> (Python uses indentation to define blocks).</li>
+<li><strong>Comment your code</strong> to explain why (not what) something is done.</li>
+<li><strong>Follow PEP8</strong> – Python’s style guide.</li>
+<li><strong>Avoid global variables</strong> as much as possible.</li>
+</ul>
+
+<hr />
+
+<h2>🧠 Python Naming Conventions</h2>
+
+<p>| Element     | Convention         | Example                      |
+| ----------- | ------------------ | ---------------------------- |
+| Variable    | <code>snake_case</code>       | <code>user_name</code>, <code>total_sum</code>     |
+| Constant    | <code>UPPER_SNAKE_CASE</code> | <code>MAX_LIMIT</code>, <code>PI</code>            |
+| Function    | <code>snake_case()</code>     | <code>calculate_total()</code>          |
+| Class       | <code>PascalCase</code>       | <code>UserProfile</code>, <code>BankAccount</code> |
+| Module/File | <code>snake_case.py</code>    | <code>user_data.py</code>               |</p>
+
+<hr />
+
+<h2>🧰 Python Basics to Master</h2>
+
+<h3>✅ Variables</h3>
+
+<p><code>python
+name = "John"
+age = 25
+</code></p>
+
+<h3>✅ Functions</h3>
+
+<p><code>python
+def greet_user(name):
+    print(f"Hello, {name}!")
+</code></p>
+
+<h3>✅ Conditionals</h3>
+
+<p><code>python
+if age &gt;= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+</code></p>
+
+<h3>✅ Loops</h3>
+
+<p><code>python
+for i in range(5):
+    print(i)
+</code></p>
+
+<h3>✅ Lists and Dictionaries</h3>
+
+<p><code>python
+fruits = ["apple", "banana", "cherry"]
+user = {"name": "Alice", "age": 30}
+</code></p>
+
+<hr />
+
+<h2>🧼 Clean Code Tips</h2>
+
+<ul>
+<li>Keep functions <strong>short and specific</strong>.</li>
+<li>Avoid hardcoding values; use <strong>constants</strong>.</li>
+<li>Use <strong>docstrings</strong> to describe functions.</li>
+<li>Don’t repeat yourself – <strong>reuse code</strong>.</li>
+</ul>
+
+<hr />
+
+<h2>🧪 Testing Your Code</h2>
+
+<p>Start using simple <code>assert</code> statements:</p>
+
+<p>```python
+def add(a, b):
+    return a + b</p>
+
+<p>assert add(2, 3) == 5
+```</p>
+
+<hr />
+
+<h2>🚀 Good Habits</h2>
+
+<ul>
+<li>Use a code editor like VS Code or PyCharm.</li>
+<li>Run your code often.</li>
+<li>Practice daily with small projects.</li>
+<li>Use version control (Git) early on.</li>
+</ul>
+
+<hr />
+
+<h2>📚 Suggested Topics After Basics</h2>
+
+<ol>
+<li>File Handling</li>
+<li>Error Handling with <code>try</code>/<code>except</code></li>
+<li>Object-Oriented Programming (OOP)</li>
+<li>Working with External Libraries (e.g., <code>requests</code>, <code>pandas</code>)</li>
+<li>Writing Tests with <code>unittest</code> or <code>pytest</code></li>
+</ol>
+
+<hr />
+
+<blockquote>
+  <p>🎯 <strong>Remember:</strong> Focus on writing readable, working code. As you grow, style and optimization will come naturally!</p>
+</blockquote>
+
+</body>
+</html>
